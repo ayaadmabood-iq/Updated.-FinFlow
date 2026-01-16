@@ -1,0 +1,32 @@
+# CODEOWNERS - Automatic PR review assignments
+# See: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owners for everything in the repo
+* @your-org/core-team
+
+# GitHub Actions workflows
+.github/workflows/ @your-org/devops-team
+
+# CI/CD scripts
+/scripts/ @your-org/devops-team
+
+# Security-sensitive files
+/src/lib/security/ @your-org/security-team
+/src/lib/auth/ @your-org/security-team
+
+# Infrastructure and configuration
+*.yml @your-org/devops-team
+*.yaml @your-org/devops-team
+*.config.* @your-org/devops-team
+/supabase/ @your-org/backend-team
+
+# Frontend components
+/src/components/ @your-org/frontend-team
+/src/pages/ @your-org/frontend-team
+
+# API routes
+/src/api/ @your-org/backend-team
+
+# Documentation
+*.md @your-org/docs-team
+/docs/ @your-org/docs-team

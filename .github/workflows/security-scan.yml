@@ -1,0 +1,102 @@
+name: Security Scan
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'  # Weekly on Monday at 6 AM
+  workflow_dispatch:
+  pull_request:
+    branches: [main, develop]
+    paths:
+      - 'package.json'
+      - 'package-lock.json'
+      - 'supabase/functions/**'
+
+jobs:
+  dependency-audit:
+    name: Dependency Audit
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Run npm audit
+        run: npm audit --audit-level=high
+        continue-on-error: true
+      
+      - name: Check for outdated packages
+        run: npm outdated || true
+      
+      - name: Generate dependency report
+        run: |
+          echo "## 📦 Dependency Security Report" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### npm audit results:" >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+          npm audit --json | jq -r '.metadata.vulnerabilities | to_entries[] | "\(.key): \(.value)"' >> $GITHUB_STEP_SUMMARY || echo "No vulnerabilities found" >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+
+  code-scan:
+    name: Code Security Scan
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Run CodeQL Analysis
+        uses: github/codeql-action/init@v3
+        with:
+          languages: javascript-typescript
+        continue-on-error: true
+      
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v3
+        continue-on-error: true
+      
+      - name: Check for secrets in code
+        run: |
+          # Simple check for common secret patterns
+          if grep -rE "(api[_-]?key|secret|password|token)\s*[:=]\s*['\"][^'\"]{10,}" src/ --include="*.ts" --include="*.tsx" 2>/dev/null; then
+            echo "⚠️ Potential secrets found in code"
+          else
+            echo "✅ No obvious secrets detected"
+          fi
+        continue-on-error: true
+
+  edge-function-scan:
+    name: Edge Function Security Scan
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Scan edge functions for security issues
+        run: |
+          echo "## 🔒 Edge Function Security Scan" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          # Check for hardcoded secrets
+          if grep -rE "(apikey|secret|password)\s*=" supabase/functions/ 2>/dev/null; then
+            echo "⚠️ Potential hardcoded secrets in edge functions" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "✅ No hardcoded secrets detected" >> $GITHUB_STEP_SUMMARY
+          fi
+          
+          # Check for CORS configurations
+          cors_count=$(grep -r "Access-Control-Allow-Origin" supabase/functions/ 2>/dev/null | wc -l)
+          echo "- CORS headers found in $cors_count files" >> $GITHUB_STEP_SUMMARY
+          
+          # Check for auth validation
+          auth_count=$(grep -rE "(auth\.getUser|verify.*jwt|authorization)" supabase/functions/ 2>/dev/null | wc -l)
+          echo "- Auth validation patterns found in $auth_count places" >> $GITHUB_STEP_SUMMARY

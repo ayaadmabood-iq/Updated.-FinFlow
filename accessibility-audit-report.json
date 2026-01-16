@@ -1,0 +1,396 @@
+{
+  "issues": [
+    {
+      "file": "src\\components\\data\\DataFileUploadZone.tsx",
+      "line": 126,
+      "type": "missing-label",
+      "severity": "high",
+      "element": "<input {...getInputProps()} />",
+      "suggestion": "Add label or aria-label to input field"
+    },
+    {
+      "file": "src\\components\\documents\\FilePreview.tsx",
+      "line": 68,
+      "type": "missing-alt",
+      "severity": "critical",
+      "element": "<img",
+      "suggestion": "Add alt attribute to image for screen readers"
+    },
+    {
+      "file": "src\\components\\documents\\FileUploadZone.tsx",
+      "line": 206,
+      "type": "missing-label",
+      "severity": "high",
+      "element": "<input {...getInputProps()} />",
+      "suggestion": "Add label or aria-label to input field"
+    },
+    {
+      "file": "src\\components\\evaluation\\CorrectionInterface.tsx",
+      "line": 126,
+      "type": "missing-label",
+      "severity": "high",
+      "element": "<input",
+      "suggestion": "Add label or aria-label to input field"
+    },
+    {
+      "file": "src\\components\\feedback\\ErrorStates.tsx",
+      "line": 172,
+      "type": "missing-label",
+      "severity": "high",
+      "element": "* <input {...} />",
+      "suggestion": "Add label or aria-label to input field"
+    },
+    {
+      "file": "src\\components\\media\\MediaGallery.tsx",
+      "line": 202,
+      "type": "missing-label",
+      "severity": "high",
+      "element": "<input {...getInputProps()} />",
+      "suggestion": "Add label or aria-label to input field"
+    },
+    {
+      "file": "src\\components\\media\\MediaGallery.tsx",
+      "line": 245,
+      "type": "missing-alt",
+      "severity": "critical",
+      "element": "<img",
+      "suggestion": "Add alt attribute to image for screen readers"
+    },
+    {
+      "file": "src\\components\\media\\MediaGallery.tsx",
+      "line": 289,
+      "type": "missing-alt",
+      "severity": "critical",
+      "element": "<img",
+      "suggestion": "Add alt attribute to image for screen readers"
+    },
+    {
+      "file": "src\\components\\media\\MediaGallery.tsx",
+      "line": 329,
+      "type": "missing-alt",
+      "severity": "critical",
+      "element": "<img",
+      "suggestion": "Add alt attribute to image for screen readers"
+    },
+    {
+      "file": "src\\components\\media\\MultiModalChatInput.tsx",
+      "line": 123,
+      "type": "missing-alt",
+      "severity": "critical",
+      "element": "<img",
+      "suggestion": "Add alt attribute to image for screen readers"
+    },
+    {
+      "file": "src\\components\\media\\MultiModalChatInput.tsx",
+      "line": 153,
+      "type": "missing-label",
+      "severity": "high",
+      "element": "<input",
+      "suggestion": "Add label or aria-label to input field"
+    },
+    {
+      "file": "src\\components\\media\\PointAndAsk.tsx",
+      "line": 189,
+      "type": "missing-alt",
+      "severity": "critical",
+      "element": "<img",
+      "suggestion": "Add alt attribute to image for screen readers"
+    },
+    {
+      "file": "src\\components\\mobile\\DocumentScanner.tsx",
+      "line": 254,
+      "type": "missing-alt",
+      "severity": "critical",
+      "element": "<img",
+      "suggestion": "Add alt attribute to image for screen readers"
+    },
+    {
+      "file": "src\\components\\mobile\\DocumentScanner.tsx",
+      "line": 372,
+      "type": "missing-label",
+      "severity": "high",
+      "element": "<input",
+      "suggestion": "Add label or aria-label to input field"
+    },
+    {
+      "file": "src\\components\\responsive\\ResponsiveForms.tsx",
+      "line": 115,
+      "type": "missing-label",
+      "severity": "high",
+      "element": "<input",
+      "suggestion": "Add label or aria-label to input field"
+    },
+    {
+      "file": "src\\components\\responsive\\ResponsiveForms.tsx",
+      "line": 228,
+      "type": "missing-label",
+      "severity": "high",
+      "element": "<input",
+      "suggestion": "Add label or aria-label to input field"
+    },
+    {
+      "file": "src\\components\\responsive\\ResponsiveForms.tsx",
+      "line": 254,
+      "type": "missing-label",
+      "severity": "high",
+      "element": "<input",
+      "suggestion": "Add label or aria-label to input field"
+    },
+    {
+      "file": "src\\components\\responsive\\ResponsiveImage.tsx",
+      "line": 60,
+      "type": "missing-alt",
+      "severity": "critical",
+      "element": "<img",
+      "suggestion": "Add alt attribute to image for screen readers"
+    },
+    {
+      "file": "src\\components\\responsive\\ResponsiveImage.tsx",
+      "line": 136,
+      "type": "missing-alt",
+      "severity": "critical",
+      "element": "<img",
+      "suggestion": "Add alt attribute to image for screen readers"
+    },
+    {
+      "file": "src\\components\\responsive\\ResponsiveImage.tsx",
+      "line": 192,
+      "type": "missing-alt",
+      "severity": "critical",
+      "element": "<img",
+      "suggestion": "Add alt attribute to image for screen readers"
+    },
+    {
+      "file": "src\\components\\training\\AddToDatasetDialog.tsx",
+      "line": 281,
+      "type": "missing-label",
+      "severity": "high",
+      "element": "<input",
+      "suggestion": "Add label or aria-label to input field"
+    },
+    {
+      "file": "src\\components\\ui\\AccessibleInput.tsx",
+      "line": 57,
+      "type": "missing-label",
+      "severity": "high",
+      "element": "<input",
+      "suggestion": "Add label or aria-label to input field"
+    },
+    {
+      "file": "src\\components\\ui\\input.tsx",
+      "line": 8,
+      "type": "missing-label",
+      "severity": "high",
+      "element": "<input",
+      "suggestion": "Add label or aria-label to input field"
+    },
+    {
+      "file": "src\\pages\\ProjectStudio.tsx",
+      "line": 158,
+      "type": "missing-label",
+      "severity": "high",
+      "element": "<input",
+      "suggestion": "Add label or aria-label to input field"
+    }
+  ],
+  "summary": {
+    "critical": [
+      {
+        "file": "src\\components\\documents\\FilePreview.tsx",
+        "line": 68,
+        "type": "missing-alt",
+        "severity": "critical",
+        "element": "<img",
+        "suggestion": "Add alt attribute to image for screen readers"
+      },
+      {
+        "file": "src\\components\\media\\MediaGallery.tsx",
+        "line": 245,
+        "type": "missing-alt",
+        "severity": "critical",
+        "element": "<img",
+        "suggestion": "Add alt attribute to image for screen readers"
+      },
+      {
+        "file": "src\\components\\media\\MediaGallery.tsx",
+        "line": 289,
+        "type": "missing-alt",
+        "severity": "critical",
+        "element": "<img",
+        "suggestion": "Add alt attribute to image for screen readers"
+      },
+      {
+        "file": "src\\components\\media\\MediaGallery.tsx",
+        "line": 329,
+        "type": "missing-alt",
+        "severity": "critical",
+        "element": "<img",
+        "suggestion": "Add alt attribute to image for screen readers"
+      },
+      {
+        "file": "src\\components\\media\\MultiModalChatInput.tsx",
+        "line": 123,
+        "type": "missing-alt",
+        "severity": "critical",
+        "element": "<img",
+        "suggestion": "Add alt attribute to image for screen readers"
+      },
+      {
+        "file": "src\\components\\media\\PointAndAsk.tsx",
+        "line": 189,
+        "type": "missing-alt",
+        "severity": "critical",
+        "element": "<img",
+        "suggestion": "Add alt attribute to image for screen readers"
+      },
+      {
+        "file": "src\\components\\mobile\\DocumentScanner.tsx",
+        "line": 254,
+        "type": "missing-alt",
+        "severity": "critical",
+        "element": "<img",
+        "suggestion": "Add alt attribute to image for screen readers"
+      },
+      {
+        "file": "src\\components\\responsive\\ResponsiveImage.tsx",
+        "line": 60,
+        "type": "missing-alt",
+        "severity": "critical",
+        "element": "<img",
+        "suggestion": "Add alt attribute to image for screen readers"
+      },
+      {
+        "file": "src\\components\\responsive\\ResponsiveImage.tsx",
+        "line": 136,
+        "type": "missing-alt",
+        "severity": "critical",
+        "element": "<img",
+        "suggestion": "Add alt attribute to image for screen readers"
+      },
+      {
+        "file": "src\\components\\responsive\\ResponsiveImage.tsx",
+        "line": 192,
+        "type": "missing-alt",
+        "severity": "critical",
+        "element": "<img",
+        "suggestion": "Add alt attribute to image for screen readers"
+      }
+    ],
+    "high": [
+      {
+        "file": "src\\components\\data\\DataFileUploadZone.tsx",
+        "line": 126,
+        "type": "missing-label",
+        "severity": "high",
+        "element": "<input {...getInputProps()} />",
+        "suggestion": "Add label or aria-label to input field"
+      },
+      {
+        "file": "src\\components\\documents\\FileUploadZone.tsx",
+        "line": 206,
+        "type": "missing-label",
+        "severity": "high",
+        "element": "<input {...getInputProps()} />",
+        "suggestion": "Add label or aria-label to input field"
+      },
+      {
+        "file": "src\\components\\evaluation\\CorrectionInterface.tsx",
+        "line": 126,
+        "type": "missing-label",
+        "severity": "high",
+        "element": "<input",
+        "suggestion": "Add label or aria-label to input field"
+      },
+      {
+        "file": "src\\components\\feedback\\ErrorStates.tsx",
+        "line": 172,
+        "type": "missing-label",
+        "severity": "high",
+        "element": "* <input {...} />",
+        "suggestion": "Add label or aria-label to input field"
+      },
+      {
+        "file": "src\\components\\media\\MediaGallery.tsx",
+        "line": 202,
+        "type": "missing-label",
+        "severity": "high",
+        "element": "<input {...getInputProps()} />",
+        "suggestion": "Add label or aria-label to input field"
+      },
+      {
+        "file": "src\\components\\media\\MultiModalChatInput.tsx",
+        "line": 153,
+        "type": "missing-label",
+        "severity": "high",
+        "element": "<input",
+        "suggestion": "Add label or aria-label to input field"
+      },
+      {
+        "file": "src\\components\\mobile\\DocumentScanner.tsx",
+        "line": 372,
+        "type": "missing-label",
+        "severity": "high",
+        "element": "<input",
+        "suggestion": "Add label or aria-label to input field"
+      },
+      {
+        "file": "src\\components\\responsive\\ResponsiveForms.tsx",
+        "line": 115,
+        "type": "missing-label",
+        "severity": "high",
+        "element": "<input",
+        "suggestion": "Add label or aria-label to input field"
+      },
+      {
+        "file": "src\\components\\responsive\\ResponsiveForms.tsx",
+        "line": 228,
+        "type": "missing-label",
+        "severity": "high",
+        "element": "<input",
+        "suggestion": "Add label or aria-label to input field"
+      },
+      {
+        "file": "src\\components\\responsive\\ResponsiveForms.tsx",
+        "line": 254,
+        "type": "missing-label",
+        "severity": "high",
+        "element": "<input",
+        "suggestion": "Add label or aria-label to input field"
+      },
+      {
+        "file": "src\\components\\training\\AddToDatasetDialog.tsx",
+        "line": 281,
+        "type": "missing-label",
+        "severity": "high",
+        "element": "<input",
+        "suggestion": "Add label or aria-label to input field"
+      },
+      {
+        "file": "src\\components\\ui\\AccessibleInput.tsx",
+        "line": 57,
+        "type": "missing-label",
+        "severity": "high",
+        "element": "<input",
+        "suggestion": "Add label or aria-label to input field"
+      },
+      {
+        "file": "src\\components\\ui\\input.tsx",
+        "line": 8,
+        "type": "missing-label",
+        "severity": "high",
+        "element": "<input",
+        "suggestion": "Add label or aria-label to input field"
+      },
+      {
+        "file": "src\\pages\\ProjectStudio.tsx",
+        "line": 158,
+        "type": "missing-label",
+        "severity": "high",
+        "element": "<input",
+        "suggestion": "Add label or aria-label to input field"
+      }
+    ],
+    "medium": [],
+    "low": []
+  }
+}

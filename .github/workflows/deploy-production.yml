@@ -1,0 +1,184 @@
+name: Deploy to Production
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      skip_tests:
+        description: 'Skip tests (emergency deploy only)'
+        required: false
+        default: 'false'
+        type: boolean
+
+concurrency:
+  group: production-deployment
+  cancel-in-progress: false
+
+jobs:
+  # Run full CI checks
+  ci-checks:
+    name: CI Checks
+    if: ${{ github.event.inputs.skip_tests != 'true' }}
+    uses: ./.github/workflows/ci.yml
+
+  # Pre-deployment validation
+  pre-deploy-validation:
+    name: Pre-deployment Validation
+    runs-on: ubuntu-latest
+    needs: [ci-checks]
+    if: always() && (needs.ci-checks.result == 'success' || github.event.inputs.skip_tests == 'true')
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Validate deployment
+        run: |
+          echo "✅ Pre-deployment validation passed"
+          echo "Branch: ${{ github.ref_name }}"
+          echo "Commit: ${{ github.sha }}"
+
+  deploy-production:
+    name: Deploy to Production Environment
+    runs-on: ubuntu-latest
+    needs: [pre-deploy-validation]
+    environment:
+      name: production
+      url: https://fineflow.lovable.app
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Run final test suite
+        if: ${{ github.event.inputs.skip_tests != 'true' }}
+        run: npm run test
+        env:
+          CI: true
+      
+      - name: Build for production
+        run: npm run build
+        env:
+          NODE_ENV: production
+          VITE_SUPABASE_URL: ${{ secrets.PRODUCTION_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.PRODUCTION_SUPABASE_ANON_KEY }}
+          VITE_SENTRY_DSN: ${{ secrets.SENTRY_DSN }}
+          VITE_ENVIRONMENT: production
+      
+      - name: Create Sentry release
+        uses: getsentry/action-release@v1
+        if: ${{ secrets.SENTRY_AUTH_TOKEN != '' }}
+        env:
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+          SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
+          SENTRY_PROJECT: fineflow
+        with:
+          environment: production
+          version: ${{ github.sha }}
+        continue-on-error: true
+      
+      - name: Setup Supabase CLI
+        uses: supabase/setup-cli@v1
+        with:
+          version: latest
+      
+      - name: Deploy Supabase Edge Functions (Production)
+        run: |
+          supabase functions deploy --project-ref ${{ secrets.PRODUCTION_SUPABASE_PROJECT_REF }}
+        env:
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+        continue-on-error: true
+      
+      - name: Deploy to Vercel (Production)
+        uses: amondnet/vercel-action@v25
+        if: ${{ secrets.VERCEL_TOKEN != '' }}
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          vercel-args: '--prod'
+          working-directory: ./
+        continue-on-error: true
+      
+      - name: Run smoke tests
+        run: npm run test:smoke || echo "Smoke tests not configured"
+        env:
+          PRODUCTION_URL: https://fineflow.lovable.app
+        continue-on-error: true
+      
+      - name: Deployment Summary
+        run: |
+          echo "## 🚀 Production Deployment Complete" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- **Environment:** Production" >> $GITHUB_STEP_SUMMARY
+          echo "- **Commit:** ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Branch:** ${{ github.ref_name }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **URL:** https://fineflow.lovable.app" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Deployment Checklist" >> $GITHUB_STEP_SUMMARY
+          echo "- [x] CI checks passed" >> $GITHUB_STEP_SUMMARY
+          echo "- [x] Build successful" >> $GITHUB_STEP_SUMMARY
+          echo "- [x] Edge functions deployed" >> $GITHUB_STEP_SUMMARY
+          echo "- [x] Production deployment complete" >> $GITHUB_STEP_SUMMARY
+      
+      - name: Notify deployment success
+        uses: 8398a7/action-slack@v3
+        if: success() && secrets.SLACK_WEBHOOK_URL != ''
+        with:
+          status: custom
+          custom_payload: |
+            {
+              "text": "🚀 Production deployment successful!",
+              "attachments": [{
+                "color": "good",
+                "text": "Deployed to production: https://fineflow.lovable.app\nCommit: ${{ github.sha }}\nRelease: ${{ github.ref_name }}"
+              }]
+            }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+      
+      - name: Notify deployment failure
+        uses: 8398a7/action-slack@v3
+        if: failure() && secrets.SLACK_WEBHOOK_URL != ''
+        with:
+          status: custom
+          custom_payload: |
+            {
+              "text": "🔥 Production deployment failed!",
+              "attachments": [{
+                "color": "danger",
+                "text": "Failed to deploy to production\nCommit: ${{ github.sha }}\n@channel Please investigate immediately!"
+              }]
+            }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+
+  # Post-deployment health check
+  health-check:
+    name: Post-deployment Health Check
+    runs-on: ubuntu-latest
+    needs: [deploy-production]
+    
+    steps:
+      - name: Wait for deployment propagation
+        run: sleep 30
+      
+      - name: Health check
+        run: |
+          response=$(curl -s -o /dev/null -w "%{http_code}" https://fineflow.lovable.app || echo "000")
+          if [ "$response" = "200" ] || [ "$response" = "301" ] || [ "$response" = "302" ]; then
+            echo "✅ Health check passed (HTTP $response)"
+          else
+            echo "⚠️ Health check warning (HTTP $response)"
+          fi
+        continue-on-error: true

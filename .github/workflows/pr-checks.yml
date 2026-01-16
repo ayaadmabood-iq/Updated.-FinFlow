@@ -1,0 +1,106 @@
+name: Pull Request Checks
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  pr-validation:
+    name: PR Validation
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check PR title format
+        uses: amannn/action-semantic-pull-request@v5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          types: |
+            feat
+            fix
+            docs
+            style
+            refactor
+            perf
+            test
+            chore
+          requireScope: false
+
+      - name: Check PR size
+        run: |
+          git fetch origin ${{ github.base_ref }}
+          FILES_CHANGED=$(git diff --name-only origin/${{ github.base_ref }}...HEAD | wc -l)
+          LINES_CHANGED=$(git diff --stat origin/${{ github.base_ref }}...HEAD | tail -1 | awk '{print $4+$6}')
+
+          echo "Files changed: $FILES_CHANGED"
+          echo "Lines changed: $LINES_CHANGED"
+
+          if [ $FILES_CHANGED -gt 50 ]; then
+            echo "⚠️  Warning: PR changes more than 50 files"
+          fi
+
+          if [ $LINES_CHANGED -gt 1000 ]; then
+            echo "⚠️  Warning: PR changes more than 1000 lines"
+          fi
+        shell: bash
+
+      - name: Check for breaking changes
+        run: |
+          git fetch origin ${{ github.base_ref }}
+          if git log origin/${{ github.base_ref }}..HEAD --format=%B | grep -i "BREAKING CHANGE"; then
+            echo "⚠️  This PR contains breaking changes"
+            echo "breaking_change=true" >> $GITHUB_OUTPUT
+          fi
+        shell: bash
+
+  dependency-review:
+    name: Dependency Review
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Dependency Review
+        uses: actions/dependency-review-action@v4
+        with:
+          fail-on-severity: moderate
+
+  code-review-assistant:
+    name: Automated Code Review
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run linting
+        run: npm run lint
+        continue-on-error: true
+
+      - name: Comment PR with review
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '✅ Automated code review completed. Check the Actions tab for details.'
+            })

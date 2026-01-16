@@ -1,0 +1,160 @@
+project_id = "jkibxapuxnrbxpjefjdn"
+
+[functions.health]
+verify_jwt = false
+
+[functions.process-document]
+verify_jwt = false
+
+[functions.export-document]
+verify_jwt = false
+
+[functions.admin-stats]
+verify_jwt = false
+
+[functions.admin-users]
+verify_jwt = false
+
+[functions.generate-embedding]
+verify_jwt = false
+
+[functions.semantic-search]
+verify_jwt = false
+
+[functions.quota-status]
+verify_jwt = false
+
+[functions.reset-monthly-quotas]
+verify_jwt = false
+
+[functions.send-notification]
+verify_jwt = false
+
+[functions.get-subscription]
+verify_jwt = false
+
+[functions.create-subscription]
+verify_jwt = false
+
+[functions.cancel-subscription]
+verify_jwt = false
+
+[functions.add-data-source]
+verify_jwt = false
+
+[functions.fetch-url-content]
+verify_jwt = false
+
+[functions.bulk-add-sources]
+verify_jwt = false
+
+[functions.generate-training-data]
+verify_jwt = false
+
+[functions.start-training]
+verify_jwt = false
+
+[functions.check-training-status]
+verify_jwt = false
+
+[functions.test-model]
+verify_jwt = false
+
+[functions.validate-dataset]
+verify_jwt = false
+
+[functions.seed-demo-data]
+verify_jwt = false
+
+[functions.training-service]
+verify_jwt = false
+
+[functions.debug-documents-rls]
+verify_jwt = false
+
+[functions.delete-document]
+verify_jwt = false
+
+[functions.manage-api-keys]
+verify_jwt = false
+
+[functions.admin-metrics]
+verify_jwt = false
+
+[functions.ingestion-executor]
+verify_jwt = false
+
+[functions.extraction-executor]
+verify_jwt = false
+
+[functions.language-executor]
+verify_jwt = false
+
+[functions.chunking-executor]
+verify_jwt = false
+
+[functions.summarization-executor]
+verify_jwt = false
+
+[functions.indexing-executor]
+verify_jwt = false
+
+[functions.run-rag-evaluation]
+verify_jwt = false
+
+[functions.compare-experiments]
+verify_jwt = false
+
+[functions.generate-rag-experiments]
+verify_jwt = false
+
+[functions.run-project-evaluations]
+verify_jwt = false
+
+[functions.optimize-project-rag]
+verify_jwt = false
+
+[functions.check-budget]
+verify_jwt = false
+
+[functions.budget-report]
+verify_jwt = false
+
+[functions.cancel-training]
+verify_jwt = false
+
+[functions.project-chat]
+verify_jwt = false
+
+[functions.generate-suggested-questions]
+verify_jwt = false
+
+[functions.generate-report]
+verify_jwt = false
+
+[functions.extract-data]
+verify_jwt = false
+
+[functions.task-orchestrator]
+verify_jwt = false
+
+[functions.api-ingest]
+verify_jwt = false
+
+[functions.integration-webhook]
+verify_jwt = false
+
+[functions.send-external-notification]
+verify_jwt = false
+
+[functions.cross-language-search]
+verify_jwt = false
+
+[functions.execute-workflow]
+verify_jwt = false
+
+[functions.metrics-collector]
+verify_jwt = false
+
+[functions.metrics-dashboard]
+verify_jwt = false

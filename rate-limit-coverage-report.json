@@ -1,0 +1,806 @@
+{
+  "timestamp": "2026-01-15T00:09:50.719Z",
+  "summary": {
+    "total": 68,
+    "protected": 53,
+    "unprotected": 15,
+    "coveragePercentage": 78
+  },
+  "functions": [
+    {
+      "name": "add-data-source",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\add-data-source\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "admin-metrics",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\admin-metrics\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "admin-stats",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\admin-stats\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "admin-users",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\admin-users\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "analyze-visual",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\analyze-visual\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "api-ingest",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\api-ingest\\index.ts",
+      "hasRateLimit": false,
+      "hasAuth": false,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "apply-correction",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\apply-correction\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "budget-report",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\budget-report\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "bulk-add-sources",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\bulk-add-sources\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "cancel-subscription",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\cancel-subscription\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "cancel-training",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\cancel-training\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "check-budget",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\check-budget\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "check-training-status",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\check-training-status\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "chunking-executor",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\chunking-executor\\index.ts",
+      "hasRateLimit": false,
+      "hasAuth": false,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "compare-experiments",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\compare-experiments\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "create-subscription",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\create-subscription\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "cross-language-search",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\cross-language-search\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "debug-documents-rls",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\debug-documents-rls\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "delete-document",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\delete-document\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "discover-connections",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\discover-connections\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "draft-document",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\draft-document\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "execute-workflow",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\execute-workflow\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "export-document",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\export-document\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "extract-chart-data",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\extract-chart-data\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "extract-data",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\extract-data\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "extract-entities",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\extract-entities\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "extraction-executor",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\extraction-executor\\index.ts",
+      "hasRateLimit": false,
+      "hasAuth": false,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "fetch-url-content",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\fetch-url-content\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "generate-content",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\generate-content\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "generate-embedding",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\generate-embedding\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "generate-embeddings",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\generate-embeddings\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "generate-rag-experiments",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\generate-rag-experiments\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "generate-report",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\generate-report\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "generate-suggested-questions",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\generate-suggested-questions\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "generate-training-data",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\generate-training-data\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "get-subscription",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\get-subscription\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "graph-search",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\graph-search\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "health",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\health\\index.ts",
+      "hasRateLimit": false,
+      "hasAuth": false,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "indexing-executor",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\indexing-executor\\index.ts",
+      "hasRateLimit": false,
+      "hasAuth": false,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "ingestion-executor",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\ingestion-executor\\index.ts",
+      "hasRateLimit": false,
+      "hasAuth": false,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "integration-webhook",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\integration-webhook\\index.ts",
+      "hasRateLimit": false,
+      "hasAuth": false,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "language-executor",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\language-executor\\index.ts",
+      "hasRateLimit": false,
+      "hasAuth": false,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "manage-api-keys",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\manage-api-keys\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "metrics-collector",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\metrics-collector\\index.ts",
+      "hasRateLimit": false,
+      "hasAuth": false,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "metrics-dashboard",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\metrics-dashboard\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "monitoring-dashboard",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\monitoring-dashboard\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "optimize-project-rag",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\optimize-project-rag\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "pipeline-orchestrator",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\pipeline-orchestrator\\index.ts",
+      "hasRateLimit": false,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "process-document",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\process-document\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "project-chat",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\project-chat\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "quota-status",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\quota-status\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "reset-monthly-quotas",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\reset-monthly-quotas\\index.ts",
+      "hasRateLimit": false,
+      "hasAuth": false,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "run-benchmark",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\run-benchmark\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "run-project-evaluations",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\run-project-evaluations\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "run-rag-evaluation",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\run-rag-evaluation\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "seed-demo-data",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\seed-demo-data\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "semantic-search",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\semantic-search\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "send-external-notification",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\send-external-notification\\index.ts",
+      "hasRateLimit": false,
+      "hasAuth": false,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "send-notification",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\send-notification\\index.ts",
+      "hasRateLimit": false,
+      "hasAuth": false,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "start-training",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\start-training\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "summarization-executor",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\summarization-executor\\index.ts",
+      "hasRateLimit": false,
+      "hasAuth": false,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "task-orchestrator",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\task-orchestrator\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "test-model",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\test-model\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "training-service",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\training-service\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "transcribe-media",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\transcribe-media\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "transform-content",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\transform-content\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "validate-dataset",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\validate-dataset\\index.ts",
+      "hasRateLimit": false,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    },
+    {
+      "name": "verify-response",
+      "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\verify-response\\index.ts",
+      "hasRateLimit": true,
+      "hasAuth": true,
+      "priority": "critical",
+      "category": "AI Operations"
+    }
+  ],
+  "bySeverity": {
+    "critical": [
+      {
+        "name": "api-ingest",
+        "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\api-ingest\\index.ts",
+        "hasRateLimit": false,
+        "hasAuth": false,
+        "priority": "critical",
+        "category": "AI Operations"
+      },
+      {
+        "name": "chunking-executor",
+        "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\chunking-executor\\index.ts",
+        "hasRateLimit": false,
+        "hasAuth": false,
+        "priority": "critical",
+        "category": "AI Operations"
+      },
+      {
+        "name": "extraction-executor",
+        "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\extraction-executor\\index.ts",
+        "hasRateLimit": false,
+        "hasAuth": false,
+        "priority": "critical",
+        "category": "AI Operations"
+      },
+      {
+        "name": "health",
+        "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\health\\index.ts",
+        "hasRateLimit": false,
+        "hasAuth": false,
+        "priority": "critical",
+        "category": "AI Operations"
+      },
+      {
+        "name": "indexing-executor",
+        "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\indexing-executor\\index.ts",
+        "hasRateLimit": false,
+        "hasAuth": false,
+        "priority": "critical",
+        "category": "AI Operations"
+      },
+      {
+        "name": "ingestion-executor",
+        "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\ingestion-executor\\index.ts",
+        "hasRateLimit": false,
+        "hasAuth": false,
+        "priority": "critical",
+        "category": "AI Operations"
+      },
+      {
+        "name": "integration-webhook",
+        "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\integration-webhook\\index.ts",
+        "hasRateLimit": false,
+        "hasAuth": false,
+        "priority": "critical",
+        "category": "AI Operations"
+      },
+      {
+        "name": "language-executor",
+        "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\language-executor\\index.ts",
+        "hasRateLimit": false,
+        "hasAuth": false,
+        "priority": "critical",
+        "category": "AI Operations"
+      },
+      {
+        "name": "metrics-collector",
+        "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\metrics-collector\\index.ts",
+        "hasRateLimit": false,
+        "hasAuth": false,
+        "priority": "critical",
+        "category": "AI Operations"
+      },
+      {
+        "name": "pipeline-orchestrator",
+        "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\pipeline-orchestrator\\index.ts",
+        "hasRateLimit": false,
+        "hasAuth": true,
+        "priority": "critical",
+        "category": "AI Operations"
+      },
+      {
+        "name": "reset-monthly-quotas",
+        "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\reset-monthly-quotas\\index.ts",
+        "hasRateLimit": false,
+        "hasAuth": false,
+        "priority": "critical",
+        "category": "AI Operations"
+      },
+      {
+        "name": "send-external-notification",
+        "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\send-external-notification\\index.ts",
+        "hasRateLimit": false,
+        "hasAuth": false,
+        "priority": "critical",
+        "category": "AI Operations"
+      },
+      {
+        "name": "send-notification",
+        "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\send-notification\\index.ts",
+        "hasRateLimit": false,
+        "hasAuth": false,
+        "priority": "critical",
+        "category": "AI Operations"
+      },
+      {
+        "name": "summarization-executor",
+        "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\summarization-executor\\index.ts",
+        "hasRateLimit": false,
+        "hasAuth": false,
+        "priority": "critical",
+        "category": "AI Operations"
+      },
+      {
+        "name": "validate-dataset",
+        "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\validate-dataset\\index.ts",
+        "hasRateLimit": false,
+        "hasAuth": true,
+        "priority": "critical",
+        "category": "AI Operations"
+      }
+    ],
+    "high": [],
+    "medium": [],
+    "low": []
+  },
+  "byCategory": {
+    "AI Operations": [
+      {
+        "name": "api-ingest",
+        "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\api-ingest\\index.ts",
+        "hasRateLimit": false,
+        "hasAuth": false,
+        "priority": "critical",
+        "category": "AI Operations"
+      },
+      {
+        "name": "chunking-executor",
+        "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\chunking-executor\\index.ts",
+        "hasRateLimit": false,
+        "hasAuth": false,
+        "priority": "critical",
+        "category": "AI Operations"
+      },
+      {
+        "name": "extraction-executor",
+        "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\extraction-executor\\index.ts",
+        "hasRateLimit": false,
+        "hasAuth": false,
+        "priority": "critical",
+        "category": "AI Operations"
+      },
+      {
+        "name": "health",
+        "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\health\\index.ts",
+        "hasRateLimit": false,
+        "hasAuth": false,
+        "priority": "critical",
+        "category": "AI Operations"
+      },
+      {
+        "name": "indexing-executor",
+        "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\indexing-executor\\index.ts",
+        "hasRateLimit": false,
+        "hasAuth": false,
+        "priority": "critical",
+        "category": "AI Operations"
+      },
+      {
+        "name": "ingestion-executor",
+        "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\ingestion-executor\\index.ts",
+        "hasRateLimit": false,
+        "hasAuth": false,
+        "priority": "critical",
+        "category": "AI Operations"
+      },
+      {
+        "name": "integration-webhook",
+        "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\integration-webhook\\index.ts",
+        "hasRateLimit": false,
+        "hasAuth": false,
+        "priority": "critical",
+        "category": "AI Operations"
+      },
+      {
+        "name": "language-executor",
+        "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\language-executor\\index.ts",
+        "hasRateLimit": false,
+        "hasAuth": false,
+        "priority": "critical",
+        "category": "AI Operations"
+      },
+      {
+        "name": "metrics-collector",
+        "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\metrics-collector\\index.ts",
+        "hasRateLimit": false,
+        "hasAuth": false,
+        "priority": "critical",
+        "category": "AI Operations"
+      },
+      {
+        "name": "pipeline-orchestrator",
+        "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\pipeline-orchestrator\\index.ts",
+        "hasRateLimit": false,
+        "hasAuth": true,
+        "priority": "critical",
+        "category": "AI Operations"
+      },
+      {
+        "name": "reset-monthly-quotas",
+        "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\reset-monthly-quotas\\index.ts",
+        "hasRateLimit": false,
+        "hasAuth": false,
+        "priority": "critical",
+        "category": "AI Operations"
+      },
+      {
+        "name": "send-external-notification",
+        "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\send-external-notification\\index.ts",
+        "hasRateLimit": false,
+        "hasAuth": false,
+        "priority": "critical",
+        "category": "AI Operations"
+      },
+      {
+        "name": "send-notification",
+        "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\send-notification\\index.ts",
+        "hasRateLimit": false,
+        "hasAuth": false,
+        "priority": "critical",
+        "category": "AI Operations"
+      },
+      {
+        "name": "summarization-executor",
+        "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\summarization-executor\\index.ts",
+        "hasRateLimit": false,
+        "hasAuth": false,
+        "priority": "critical",
+        "category": "AI Operations"
+      },
+      {
+        "name": "validate-dataset",
+        "file": "C:\\Users\\la_casa\\Desktop\\vibe coding\\fineflow-foundation-main (6)\\fineflow-foundation-main\\supabase\\functions\\validate-dataset\\index.ts",
+        "hasRateLimit": false,
+        "hasAuth": true,
+        "priority": "critical",
+        "category": "AI Operations"
+      }
+    ]
+  }
+}

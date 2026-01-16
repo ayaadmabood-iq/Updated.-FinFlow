@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <!-- Background -->
+  <rect width="512" height="512" fill="#6366f1" rx="96"/>
+
+  <!-- Safe zone for maskable icon (80% of canvas) -->
+  <g transform="translate(51.2, 51.2)">
+    <!-- Document with AI spark icon -->
+    <g transform="translate(102.4, 76.8)">
+      <!-- Document -->
+      <path d="M0 40C0 17.909 17.909 0 40 0H153.6L204.8 51.2V246.4C204.8 268.491 186.891 286.4 164.8 286.4H40C17.909 286.4 0 268.491 0 246.4V40Z" fill="white" fill-opacity="0.95"/>
+
+      <!-- Folded corner -->
+      <path d="M153.6 0L204.8 51.2H173.6C162.255 51.2 153.6 42.545 153.6 31.2V0Z" fill="white" fill-opacity="0.75"/>
+
+      <!-- Document lines -->
+      <rect x="30.72" y="76.8" width="102.4" height="10.24" rx="5.12" fill="#6366f1" fill-opacity="0.3"/>
+      <rect x="30.72" y="102.4" width="143.36" height="10.24" rx="5.12" fill="#6366f1" fill-opacity="0.3"/>
+      <rect x="30.72" y="128" width="133.12" height="10.24" rx="5.12" fill="#6366f1" fill-opacity="0.3"/>
+      <rect x="30.72" y="153.6" width="92.16" height="10.24" rx="5.12" fill="#6366f1" fill-opacity="0.3"/>
+
+      <!-- AI Spark/Star effect -->
+      <g transform="translate(143.36, 194.56)">
+        <!-- Main star -->
+        <path d="M20.48 0L25.088 14.336L40.96 20.48L25.088 26.624L20.48 40.96L15.872 26.624L0 20.48L15.872 14.336L20.48 0Z" fill="#fbbf24"/>
+
+        <!-- Small sparkles -->
+        <circle cx="51.2" cy="10.24" r="4.096" fill="#fbbf24" fill-opacity="0.8"/>
+        <circle cx="5.12" cy="35.84" r="3.072" fill="#fbbf24" fill-opacity="0.6"/>
+        <circle cx="46.08" cy="35.84" r="2.56" fill="#fbbf24" fill-opacity="0.7"/>
+      </g>
+
+      <!-- AI chip icon in bottom left -->
+      <g transform="translate(25.6, 204.8)">
+        <rect x="5.12" y="5.12" width="30.72" height="30.72" rx="4.096" fill="#6366f1" fill-opacity="0.15" stroke="#6366f1" stroke-width="2.56"/>
+        <rect x="12.8" y="12.8" width="15.36" height="15.36" rx="2.048" fill="#6366f1" fill-opacity="0.3"/>
+        <!-- Chip pins -->
+        <rect x="0" y="10.24" width="5.12" height="2.56" fill="#6366f1" fill-opacity="0.4"/>
+        <rect x="0" y="20.48" width="5.12" height="2.56" fill="#6366f1" fill-opacity="0.4"/>
+        <rect x="0" y="30.72" width="5.12" height="2.56" fill="#6366f1" fill-opacity="0.4"/>
+        <rect x="35.84" y="10.24" width="5.12" height="2.56" fill="#6366f1" fill-opacity="0.4"/>
+        <rect x="35.84" y="20.48" width="5.12" height="2.56" fill="#6366f1" fill-opacity="0.4"/>
+        <rect x="35.84" y="30.72" width="5.12" height="2.56" fill="#6366f1" fill-opacity="0.4"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Subtle gradient overlay for depth -->
+  <defs>
+    <linearGradient id="overlay" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="white" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="black" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" fill="url(#overlay)" rx="96"/>
+</svg>

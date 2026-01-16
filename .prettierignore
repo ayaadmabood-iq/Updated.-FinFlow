@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+dist/
+build/
+coverage/
+
+# Build outputs
+*.min.js
+*.min.css
+
+# Generated files
+*.log
+.DS_Store
+.env*
+
+# IDE
+.vscode/
+.idea/
+
+# Version control
+.git/
